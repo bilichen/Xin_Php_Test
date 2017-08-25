@@ -11,8 +11,11 @@
 function __autoload($model_name){
     require "{$model_name}.class.php";
 }
-$userModel = new UserModel();
-$row = $userModel->getList();
-require "view.php";
 
+$c = isset($_GET['c'])?$_GET['c']:User;
+$a = isset($_GET['a'])?$_GET['a']:showList;
+$controller_name = $c.Controller;
+$action_name = $a.Action;
+$controller = new $controller_name();
+$controller->$action_name();
 ?>

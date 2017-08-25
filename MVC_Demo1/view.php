@@ -29,7 +29,7 @@
         <td><?php echo $item['username']?></td>
         <td><?php echo $item['pwd']?></td>
         <td><button value="修改">修改</button></td>
-        <td><button value="删除">删除</button></td>
+        <td><button value="删除" onclick="location.href='index.php?c=User&a=del&id=<?php echo $item['id']?>'">删除</button></td>
     </tr>
     <?php endforeach;?>
 

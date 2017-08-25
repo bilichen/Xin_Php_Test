@@ -1,7 +1,7 @@
 <?php
 return array(
     'host' => "localhost",
-    'port' => "3306",
+    'port' => "3307",
     'user' => "root",
     'pwd' => "",
     'charset' => "utf8",

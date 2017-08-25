@@ -37,8 +37,10 @@ class MySql{
         while($row=mysqli_fetch_assoc($result)){
             $array[] = $row;
         }
-        var_dump($array);
         return $array;
+    }
+    public function del($sql){
+        $this->query($sql);
     }
     private function query($sql){
         if(!$result=mysqli_query($this->link,$sql)){
